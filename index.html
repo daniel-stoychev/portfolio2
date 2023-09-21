@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Junior JS Dev</title>
+	<link href="https://fonts.googleapis.com/css?family=Chilanka" rel="stylesheet">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styleMOBI.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body>
+  <a id="button"></a>
+	<header>
+		<video autoplay muted loop id="myVideo">
+			<source src="back_video.mp4" type="video/mp4">
+		</video> 
+		<nav>
+			<div class="logo">
+				<img src="siteground-logo-white-transparent-vector.svg">
+			</div>
+			<div class="menubutton">
+				<!-- <img src="images/threelines.png"> -->
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<div class="menu">
+				<a id="mobileLogo" href="https://portfolio.danielstoychev.com/"><img src="images/siteground-logo-white.png"></a>
+				<br>
+				<!-- <button class="closeMenu" onclick="openMenu()">&#10007;</button> -->
+				<a href="https://portfolio.danielstoychev.com">Home</a>
+				<a href="https://portfolio.danielstoychev.com/todo.html">To do list</a>
+				<a href="https://portfolio.danielstoychev.com/gallery.html">Gallery</a>
+			</div>
+			
+		</nav>
+		<div style="clear: both;"></div>
+		<div class="header_content">
+			<h1>Warm welcome <span id="firstname"> !</span> How are you today ?</h1>
+			<h2>This is some site title and text! Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
+			<button onclick= "scrollElement()" id="animation_container"></button>
+			<button onclick= "scrollElement1()" id="to_video" type="button">Smooth scroll to video!</button>
+			<script>
+				let	= animation = bodymovin.loadAnimation({
+					container: document.getElementById('animation_container'),
+					path: 'arrow.json',
+					render: 'svg',
+					loop: true,
+					autoplay: true,
+//					name: 'demo animation'
+				})
+			</script>
+
+		</div>
+		<div style="clear:both;"></div>
+	</header>
+
+	<main>
+		<div class="section1" id="section1">
+			<h1>Heading of a section!</h1>
+			<hr>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation</p>
+			<h3>Email Address*</h3>
+			<form name="subForm" action="" onsubmit="return validateForm()">
+			  	<input type="email" id="email" name="email" placeholder="example@sth.com"><br>
+			  	<input type="submit" id="email_button" value="Subscribe">
+			</form> 
+			<p id="clarification">*indicates required</p>
+		</div>
+		<div style="clear: both;"></div>
+
+		<div class="section2" id="section2">
+
+			<div class="text">
+				
+				<div class="animated">
+					<h2>Heading of a section!</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p><br>
+					<p>Ut enim ad minim veniam,
+					quis nostrud exercitation.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation</p>
+				</div>
+				
+		
+				<div class="animated">
+					<video width="100%" controls>
+						<source src="images/greece_compressed.mp4" type="video/mp4">
+					</video>
+				</div>
+			</div>
+
+		</div>
+		<div class="section3" id="section3">		
+			<a class="animated_btn" href="https://portfolio.danielstoychev.com/todo.html">To do list</a>			
+			<a class="animated_btn" href="https://portfolio.danielstoychev.com/gallery.html">Gallery</a>				
+		</div>
+
+	</main>
+  <footer>
+		<div class="footer_parent">
+			<div class="footer_content">
+				<a href="https://eu.siteground.com/"><img src="siteground-logo-white-transparent-vector.svg"></a>
+				<div class="social">
+					<a href="#"><img src="images/facebook_747374.png"></a>
+					<a href="#"><img src="images/instagram_717392.png"></a>
+				</div>
+				<hr>
+				<div class="rights">
+					<p id="right">© 2023 All Rights Reserved</p>
+					<p id="designed">Designed & Developed by Daniel Stoychev</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

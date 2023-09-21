@@ -1,0 +1,190 @@
+/** {
+	margin: 0;
+	padding: 0;
+	font-family: 'Shadows Into Light', cursive;
+	font-family: 'Chilanka', sans-serif;
+
+}*/
+
+body {
+	background: linear-gradient(155deg, #333230, #EEE0FA);
+	min-height: 100vh;
+}
+/*
+nav {
+	width: 100%;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	padding-top: 40px;
+	padding-left: 50px;
+
+}
+
+.logo img {
+	width: 200px;
+}
+
+.menubutton {
+	display: none;
+}
+
+.menu {
+	float: right;
+	margin-top: 40px;
+	margin-right: 100px;
+	padding-top: 20px;
+	padding-left: 20px;
+}
+
+nav a {
+	font-size: 15px;
+	text-decoration: none;
+	color: #333230;
+	margin-right: 18px;
+	margin-left: 30px;
+	text-transform: uppercase;
+
+}
+
+
+.menu a:hover {
+	border-top: 4px solid #96cb4c;
+	padding-top: 56px;
+	color: #96cb4c;
+	text-decoration: none;
+	
+}
+
+.menu a:focus {
+	color: #96cb4c;
+	text-decoration: none;
+}*/
+header {
+	height: unset;
+}
+
+.todo_list {
+	width: 400px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: whitesmoke;
+	padding: 5%;
+	border-radius: 10px;
+	margin-top: 100px;
+}
+
+.todo_list img {
+	width: 40px;
+	vertical-align: middle;
+}
+
+.row {
+	margin-top: 30px;
+	display: flex; /*removes space between elements*/
+	align-items: center;
+	justify-content: space-between; /*making them appear in the far ends*/
+	background: #C6D4F4;
+	padding-left: 20px;
+	margin-block: 25px;
+	border-radius: 30px;
+}
+
+input {
+	flex: 1; /*taking the whole width*/
+	border:	none;
+	outline: none;
+	background:	transparent;
+	padding: 10px;
+}
+
+button {
+	border:none;
+	outline: none;
+	background:	#96cb4c;
+	padding: 15px 50px;
+	border-radius: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: 0.7s;
+	color: black;
+}
+
+button:hover {
+	background-color: #79A63D;
+}
+
+ul li {
+	list-style: none;
+	font-size: 17px;
+	padding: 16px 8px 12px 46px;
+	user-select: none;
+	cursor: pointer;
+	position: relative;
+}
+
+ul li::before {
+	content: '';
+	position: absolute;
+	height: 23px;
+	width: 23px;
+	background-image: url(https://portfolio.danielstoychev.com/images/x.svg);
+	background-size: cover;
+	background-position: center;
+	top: 12px;
+	left: 8px;
+	vertical-align: middle;
+}
+
+ul li.checked {
+	color: #464646cc;
+	text-decoration: line-through;
+}
+
+ul li.checked::before {
+	background-image: url(https://portfolio.danielstoychev.com/images/done.svg);
+}
+
+ul li span {
+	position: absolute;
+	right: 0;
+	top: 6px;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	line-height: 45px;
+	text-align: center;
+	transition: 1s;
+	border-radius: 50%;
+	padding-left: 1px;
+}
+
+ul li span:hover {
+	background: #C6D4F4;
+
+}
+
+#delete_btn {
+	background:	#bd2020cc;
+	transition: 1s;
+	padding: 9px;
+	border-radius: 5px;
+	font-size: 15px;
+	margin-left: 237px;
+	margin-top: 20px;	
+	border:none;
+	outline: none;
+	cursor: pointer;
+}
+
+#delete_btn:hover {
+	background: #ff2e2ecc;
+}
+
+#hidden {
+	display: none;
+}
+
+

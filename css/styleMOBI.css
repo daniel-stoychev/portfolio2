@@ -1,0 +1,220 @@
+@media screen and (max-width: 800px) {
+	.header_content {
+		width: 90%;	
+	}
+	.menu {
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		background-color: #333230;
+		margin-top: unset;
+		margin-right: unset;
+		padding-top: 150px;
+		padding-left: 0px;
+		padding-right: 0px;
+		opacity: 0;
+		z-index: 1;
+		right: -800px;
+		transition: 0.5s;
+		pointer-events: none;
+	}
+
+	.menu br {
+	display: block;
+	}
+	.menu img {
+	display: block;
+	}
+
+	#mobileLogo {
+		position: absolute;
+		top: 0px;
+    	left: 30px;
+		display: block;
+	}
+	#mobileLogo:hover{
+		background-color: unset;
+	}
+
+	.active.menu {
+		opacity: 1;
+		right: 0px;
+		pointer-events: fill;
+	}
+
+	.closeMenu {
+	color: white;
+  	position: absolute;
+  	top: 10px;
+  	right: 25px;
+  	font-size: 31px;
+  	font-weight: bold;
+/*  	transition: 1s;*/
+  	display: block;
+	}
+
+
+/*	.closeMenu:hover,
+	.closeMenu:focus {
+	  color: #999;
+	  text-decoration: none;
+	  cursor: pointer;
+	}*/
+	.menu a {
+		display: block;
+		padding: 30px;
+		transition: 0.5s;
+	}
+
+	.menu a:hover {
+		border-top: unset;
+		padding-top: 30px;
+		background-color: #CEF2CF;
+		color: black;
+	}
+
+	.menu a:focus {
+		color: unset;
+		text-decoration: unset;
+	}
+
+
+	nav a {
+		margin-left: unset;
+		margin-right: unset;
+		font-size: 30px;
+	}
+
+	.menubutton {
+		z-index: 2;
+		opacity: 1;
+	/*	position: fixed;*/
+	/*    transition: 0.5s;*/
+	}
+
+	.section1 p {
+		width: 100%;
+
+	}
+
+	.section2 {
+	    padding-left: 0;
+    	padding-right: 0;
+	}
+
+	.text1 {
+		width: 100%;
+		padding: 0;
+		text-align: center;
+	}
+
+	.text1 p {
+	padding-bottom: 20px;
+	}
+
+
+	.animated p {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.video_section {
+		width: 100%;
+	}
+
+	footer > .footer_parent > .footer_content > a >img {
+		width: 60%;
+	}
+
+	#right {
+		float: none;
+		margin-bottom: 10px;
+	}
+	#designed {
+		float: none;
+		margin-bottom: 5px;
+	}
+}
+/*TODO APP*/
+	@media screen and (max-width: 500px) {
+	.row {
+		display: block;
+		padding-left: 0px;
+		width: 90%;
+  		margin-right: auto;
+  		margin-left: auto;
+  		margin-bottom: 15px;
+	}
+	.row > button {
+		float: left;
+	}
+	input {
+		width: 100%;
+		padding: 15px 20px;
+   		vertical-align: middle;
+   		font-size: 17px;
+
+	}
+	.todo_list {
+		width: 90%;
+		margin-right: auto; 
+    	margin-left: auto;
+		border-radius: 0;
+	}
+	#hidden-mobi {
+		display: none;
+	}
+	#hidden {
+		display: inline-block;
+		border-radius: 5px;
+		margin-top: 10px;
+		padding: 10px;
+		padding: 10px 40px;
+	}
+	#delete_btn {
+		float: right;
+		margin-top: 10px;
+		margin-left: 0px;
+		font-size: 16px;
+		padding: 10px 20px;
+	}
+	ul {
+		margin-bottom: 15px;
+	}
+	h1 {
+		text-align: center;
+	}
+}
+	/*GALLERY APP*/
+
+@media screen and (max-width: 650px) {
+	ul {
+		display: block;
+		width: 80%;
+		margin-left: auto;
+    	margin-right: auto;
+	}
+	.item {
+		width: 90%;
+		height: unset;
+	}
+	.mySlides {
+		width: 100%;
+
+		/*left: 0%;
+		transform: translate(0%, -50%);*/
+	}
+	#bigIMG {
+		width: 100%;
+		margin-top: 30px;
+	}
+	#smallIMG {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	#bigIMG {
+	width: 100%;;
+	}
+}

@@ -1,0 +1,572 @@
+* {
+	margin: 0;
+	padding: 0;
+	/*font-family: 'Shadows Into Light', cursive;*/
+	font-family: 'Chilanka', sans-serif;
+
+}
+
+body {
+	background-color: black;
+}
+
+header {
+	height: 100vh;
+}
+
+#myVideo {
+	position: absolute;
+ 	right: 0;
+ 	top: 0;
+	min-width: 100%;
+ 	min-height: 100%;
+ 	opacity: 0.5;
+ 	color: white;
+ 	z-index: -1;
+}
+
+nav {
+	width: 100%;
+}
+
+.logo {
+	width: 30%;
+	float: left;
+	padding-top: 40px;
+	padding-left: 40px;
+
+}
+
+.logo img {
+	width: 200px;
+}
+
+.menubutton {
+	display: none;
+}
+
+.menubutton {
+	width: fit-content;
+	height: auto;
+	position: absolute;
+	border-radius: 4px;
+	cursor: pointer;
+	display: block;
+	margin: 30px;
+	right: 8px;
+    top: 8px;
+    opacity: 0;
+}
+.menubutton:hover {
+	background-color: #333230;
+}
+.menubutton:active {
+	background-color: #333230
+}
+.line1,.line2,.line3 {
+	width: 38px;
+	height: 4px;
+	background-color: #96cb4c;
+	border-radius: 50px;
+	margin:	9px 7px;
+	transition: 0.2s;
+} 
+.active .line1 {
+	transform: translate(0px, 13px)rotate(45deg);
+	background-color: white;
+}
+.active .line2 {
+	opacity: 0;
+}
+.active .line3 {
+	transform: translate(0px, -13px)rotate(-45deg);
+	background-color: white;
+}
+
+.closeMenu {
+	display: none;
+}
+.menu {
+	float: right;
+	margin-top: 40px;
+	margin-right: 100px;
+	padding-top: 20px;
+	padding-left: 20px;
+	display: block;
+}
+.menu br {
+	display: none;
+}
+.menu img {
+	display: none;
+}
+
+nav a {
+	font-size: 15px;
+	text-decoration: none;
+	color: white;
+	margin-right: 18px;
+	margin-left: 30px;
+	text-transform: uppercase;
+
+}
+
+
+.menu a:hover {
+	border-top: 4px solid #96cb4c;
+	padding-top: 56px;
+	color: #96cb4c;
+	text-decoration: none;
+	
+}
+
+.menu a:focus {
+	color: #96cb4c;
+	text-decoration: none;
+}
+
+.header_content {
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	text-align: center;
+	color: white;
+}
+
+.header_content h2 {
+	padding: 30px;
+	font-size: 20px;
+	line-height: 25pt;
+}
+
+.header_content h1 {
+	font-size: 40px;
+}
+
+#firstname {
+	text-transform: uppercase;
+}
+
+#animation_container {
+	width: 150px;
+	background: none;
+	transform: rotate(180deg);
+	display: block;
+	border: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#animation_container:hover {
+	cursor: pointer;
+}
+
+#to_video {
+	text-transform: uppercase;
+	font-size: 15px;
+	font-weight: bolder;
+	width: 250px;
+	background-color: #96cb4c;
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
+	border-radius: 5px;
+	-webkit-transition: 1s;
+	margin-bottom: 20px;
+}
+
+#to_video:hover {
+	cursor: pointer;
+	background-color: #79A63D;
+}
+
+/*------section1-------*/
+
+.section1 {
+	background: url(https://portfolio.danielstoychev.com/images/court.jpg);
+	background-size: cover;
+	width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 60px;
+    text-align: center;
+
+}
+
+.section1 h1 {
+	padding-bottom: 30px;
+	font-size: 50px;
+}
+
+.section1 hr {
+	width: 10%;
+	margin-left: auto;
+    margin-right: auto;
+    border-top:2px solid white;
+    border-color: #96cb4c;
+}
+
+.section1 p {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 20px;
+	width: 50%;
+	margin-left: auto;
+    margin-right: auto;
+}
+
+#email {
+	width: 40%;
+	height: 30px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+#email_button {
+	text-transform: uppercase;
+	font-size: 15px;
+	width: 200px;
+	background-color: #96cb4c;
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: white;
+	border-radius: 3px;
+	-webkit-transition: 1s;
+}
+
+#email_button:hover {
+	cursor: pointer;
+	background-color: #79A63D;
+}
+
+#clarification {
+	color: white;
+	font-family: serif;
+	font-size: 15px;
+}
+/*------section2-------*/
+
+.section2 {
+	background: url(https://portfolio.danielstoychev.com/images/grasscourt.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+}
+
+.text1 {
+	background-color: rgba(0, 0, 0, 0.64);
+	padding:20px;
+	margin-bottom: 30px;
+	width: 40%;
+	float: left;
+	margin-top: 60px;
+}
+
+.text1 h2 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.video_section {
+	width: 50%;
+	float: right;
+	vertical-align: middle;
+	margin-top: 50px;
+}
+
+
+/*------section2-------*//*FADEINLEFT/RIGHT---START---*/
+
+.text1 {
+	-webkit-animation: fadeInLeft 2s both;
+	-moz-animation: fadeInLeft 2s both;
+	-o-animation: fadeInLeft 2s both;
+	animation: fadeInLeft 2s both;
+}
+
+
+/*DEPRICATED??????@-webkit-keyframes fadeInLeft {      ????????????????????????
+	0%{
+		opacity: 0;
+		-webkit-transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+@-moz-keyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		-moz-transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+@-o-keyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		-o-transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}*/
+@keyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+.video_section{
+		-webkit-animation: fadeInRight 2s both;
+	-moz-animation: fadeInRight 2s both;
+	-o-animation: fadeInRight 2s both;
+	animation: fadeInRight 2s both;
+}
+
+/*@-webkit-keyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		-webkit-transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform: translateX(0);
+	}
+}
+@-moz-keyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		-moz-transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		-moz-transform: translateX(0);
+	}
+}
+@-o-keyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		-o-transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		-o-transform: translateX(0);
+	}
+}
+@eyframes fadeInLeft {
+	0%{
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+*/
+@keyframes fadeInRight {
+	0%{
+		opacity: 0;
+		transform: translateX(200px);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+
+/*------section2-------*//*FADEINLEFT/RIGHT---END---*/
+/*------section3-------*/
+
+.section3 {
+	background: url(https://portfolio.danielstoychev.com/images/tournament.jpg);
+	background-size: cover;
+	background-position: center;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    padding-left: 60px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+.section3 a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: bolder;
+	width: 250px;
+	background-color: #96cb4c;
+	border: none;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	/*padding-left: 20px;
+	padding-right: 20px;*/
+	color: white;
+	border-radius: 5px;
+	-webkit-transition: 1s;
+}
+
+.section3 a:hover {
+	background-color: #79A63D;
+}
+
+.todo {
+	-webkit-animation: fadeInLeft 2s both;
+	-moz-animation:fadeInLeft 2s both;
+	-o-animation:fadeInLeft 2s both;
+	animation:fadeInLeft 2s both;
+	margin-right: 30px;
+}
+
+.gallery {
+	-webkit-animation: fadeInRigth 2s both;
+	-moz-animation:fadeInRigth 2s both;
+	-o-animation:fadeInRigth 2s both;
+	animation:fadeInRight 2s both;
+	margin-left: 30px;
+}
+
+/*------FOOTER-------*/
+
+footer {
+	background-color: #333230;
+	text-align: center;
+}
+
+.footer_content {
+	-webkit-animation: fadeIn 2s both;
+	-moz-animation: fadeIn 2s both;
+	-o-animation: fadeIn 2s both;
+	animation: fadeIn 2s both;
+}
+
+@keyframes fadeIn {
+	0%{
+		opacity: 0;
+		
+	}
+	100%{
+		opacity: 1;
+		
+	}
+}
+
+footer > .footer_parent > .footer_content > a >img {
+	width: 15%;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+footer hr {
+	width: 80%;
+	margin-left: auto;
+    margin-right: auto;
+    border-top:1px solid white;
+    border-color: #96cb4c;
+}
+
+.social {
+	margin-bottom: 50px;
+}
+
+.social > a > img {
+	width: 25px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.rights {
+	color: white;
+	width: 90%;
+	margin-top: 50px;
+	padding-bottom: 50px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#right {
+	float: left;
+}
+
+#designed {
+	float: right;
+}
+
+
+
+.social img {
+	width: 30px;
+	color: white;
+}
+
+/*BUTTON-SCROLLER*/
+
+button:focus { outline: none; }
+
+#button {
+  display: inline-block;
+  background-color: #96cb4c;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  text-decoration: none;
+}
+#button::after {
+  content: "\f19d";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  
+}
+#button:active {
+  background-color: #048ace;
+}
+#button.show {
+  opacity: 0.8;
+  visibility: visible;
+}
+
+/*END-BUTTON-SCROLLER*/

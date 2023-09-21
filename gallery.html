@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Junior JS Dev</title>
+	<link href="https://fonts.googleapis.com/css?family=Chilanka" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/gallery.css">
+	<link rel="stylesheet" type="text/css" href="css/styleMOBI.css">
+
+</head>
+<body>
+	<a id="button"></a>
+	<header>
+		<nav>
+			<div class="logo">
+				<img src="siteground-logo-white-transparent-vector.svg">
+			</div>
+			<div class="menubutton">
+				<!-- <img src="images/threelines.png"> -->
+				<div class="line1"></div>
+				<div class="line2"></div>
+				<div class="line3"></div>
+			</div>
+			<div class="menu">
+				<a id="mobileLogo" href="https://portfolio.danielstoychev.com/"><img src="images/siteground-logo-white.png"></a>
+				<br>
+				<!-- <button class="closeMenu" onclick="openMenu()">&#10007;</button> -->
+				<a href="https://portfolio.danielstoychev.com">Home</a>
+				<a href="https://portfolio.danielstoychev.com/todo.html">To do list</a>
+				<a href="https://portfolio.danielstoychev.com/gallery.html">Gallery</a>
+			</div>
+		</nav>
+		<div style="clear: both;"></div>
+
+	</header>
+
+	<main>
+		<div class="btnContainer">
+			<ul>
+				<li class="list active" data-filter="all">Show All</button>
+				<li class="list" data-filter="spring">Spring</button>
+				<li class="list" data-filter="summer">Summer</button>
+				<li class="list" data-filter="autumn">Autumn</button>
+				<li class="list" data-filter="winter">Winter</button>	
+			</ul>		
+		</div>
+		
+			<div class="images">
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(1)"><img src="images/gallery/autumn1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(2)"><img src="images/gallery/spring2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(3)"><img src="images/gallery/winter2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(4)"><img src="images/gallery/summer1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(5)"><img src="images/gallery/summer2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(6)"><img src="images/gallery/summer3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(7)"><img src="images/gallery/summer4Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(8)"><img src="images/gallery/autumn3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(9)"><img src="images/gallery/autumn2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(10)"><img src="images/gallery/spring1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(11)"><img src="images/gallery/winter3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(12)"><img src="images/gallery/spring3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(13)"><img src="images/gallery/winter1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				
+			</div>
+
+			<!-- <div class="images">
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(1)"><img src="images/gallery/spring1Thumb.jpg" ><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(2)"><img src="images/gallery/spring2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(3)"><img src="images/gallery/spring3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(4)"><img src="images/gallery/summer1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(5)"><img src="images/gallery/summer2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(6)"><img src="images/gallery/summer3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div> -->
+				<!-- <div class="item" data-item="summer" onclick="openModal();currentSlide(7)"><img src="images/gallery/summer4Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div> -->
+				<!-- <div class="item" data-item="autumn" onclick="openModal();currentSlide(7)"><img src="images/gallery/autumn1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(8)"><img src="images/gallery/autumn2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(9)"><img src="images/gallery/autumn3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(10)"><img src="images/gallery/winter1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(11)"><img src="images/gallery/winter2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(12)"><img src="images/gallery/winter3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				
+			</div> -->
+
+			
+
+
+			<div id="myModal" class="modal">
+				<span class="close" onclick="closeModal()">&#10007;<p style="font-size: 15px;">or anywhere else :)</p></span>
+				<div class="modal-content">
+
+				    <div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn1.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring2.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter2.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer1.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer2.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer3.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer4.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn3.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn2.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring1.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter3.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring3.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter1.jpg" id="bigIMG">
+					</div>
+
+
+
+					<!-- <div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring1.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring2.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring3.jpg" id="smallIMG">
+					</div>
+
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer1.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer2.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer3.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides active" data-item="summer">
+						<img src="images/gallery/summer4.jpg" id="smallIMG">
+					</div> 
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn1.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn2.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn3.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter1.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter2.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter3.jpg" id="bigIMG">
+					</div> -->
+
+				<!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    			<a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+			</div>
+		</div>
+		
+	</main>
+
+
+<script type="text/javascript" src="js/scriptGallery.js"></script>
+
+</body>
+</html>
