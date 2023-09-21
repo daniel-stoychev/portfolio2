@@ -92,7 +92,12 @@ Replace server paths with local ones
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://danielstoychev.com/)
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=&logoColor=white)](https://portfolio.danielstoychev.com/index.html/)
+
+
+[![portfolio](https://img.shields.io/badge/to_do_list-000?style=for-the-badge&logo=&logoColor=white)](https://portfolio.danielstoychev.com/todo.html/)
+
+[![portfolio](https://img.shields.io/badge/gallery-000?style=for-the-badge&logo=&logoColor=white)](https://portfolio.danielstoychev.com/gallery.html/)
 
 
 ## Screenshots
