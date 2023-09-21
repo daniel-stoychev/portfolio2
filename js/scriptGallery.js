@@ -16,10 +16,10 @@ for (let i = 0; i<list.length; i++){
 
 		/*document.getElementsByClassName("mySlides active").style.display = "none"*/
 
-		/*sets display = 'none' to all slides, this is needed each time one element stays with block display*/
-		 for (i=0;i<myslides.length;i++){
-  		 myslides[i].style.display = 'none';
-		 }
+		/*sets display = 'none' to all slides, this is needed each time one element stays with block display====*/ 
+		 // for (i=0;i<myslides.length;i++){
+  	// 	 myslides[i].style.display = 'none';
+		 // }
 		/*-----*/
 		for(let j = 0; j<list.length; j++){
 			list[j].classList.remove('active')
@@ -32,15 +32,15 @@ for (let i = 0; i<list.length; i++){
 			item[k].classList.remove('active');
 			item[k].classList.add('hide');
 
-			 myslides[k].classList.remove('active');
-			 myslides[k].classList.add('hide');
+			 // myslides[k].classList.remove('active'); ====
+			 // myslides[k].classList.add('hide');
 
 			if(item[k].getAttribute('data-item') == dataFilter || dataFilter == 'all'){
 				item[k].classList.remove('hide')
 				item[k].classList.add('active')
 
-				 myslides[k].classList.remove('hide')
-				 myslides[k].classList.add('active')
+				 // myslides[k].classList.remove('hide') ====
+				 // myslides[k].classList.add('active')
 			}
 			/*if(true) {
 				closeModal() {
@@ -54,9 +54,18 @@ for (let i = 0; i<list.length; i++){
 }
 
 
+	
 
 function openModal() {
-  	document.getElementById("myModal").style.display = "block";
+  	// document.getElementById("myModal").style.display = "block";	
+  	const zoomModal = document.getElementById('myModal');
+  	// const zoomImage = document.getElementById('smallIMG');
+  	zoomModal.style.display = "block";
+  	// zoomImage.style.opacity = '1';
+  	// zoomImage.style.transform = 'scale(1.2)';
+  	// zoomModal.style.animation = "fadeIn 4s both";
+  	// zoomModal.style.border = "1px solid white";
+  	// zoomModal.style.background = "red";
 }
 
 function closeModal() {
@@ -71,12 +80,16 @@ function closeModal() {
  	}
  })
 
+
+
+
+
 let slideIndex;  /*removed = 1*/
 showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+// function plusSlides(n) {   ====
+//   showSlides(slideIndex += n);
+// }
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
@@ -92,16 +105,21 @@ function showSlides(n) {
   // }
 
 // ==============
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  // if (n > slides.length) {slideIndex = 1} ====
+  // if (n < 1) {slideIndex = slides.length} ====
 
   for (m = 0; m < slides.length; m++) {
       slides[m].style.display = "none";
   }
 
-  slides[slideIndex-1].style.display = "block"; 	
+  slides[slideIndex-1].style.display = "block"; 
 
 }
+
+
+
+
+
 
 
 
@@ -114,7 +132,7 @@ function showSlides(n) {
 // const modal = document.getElementById('myModal');
 
 // // Get the modal image
-// const modalImage = document.getElementById('modalImage');
+// //const modalImage = document.getElementById('modalImage');
 
 // // Display the modal with the clicked image
 // function openModal(index) {
@@ -203,6 +221,7 @@ function showSlides(n) {
 function closeModal() {
   document.querySelector(".modal").style.display = "none"
 }*/
+//################################################//
 
 
 
