@@ -49,6 +49,102 @@ inputBox.addEventListener("keypress", function(event) { //action upon pressin EN
     }
 });
 ```
+### Comments and code review
+```bash
+const inputBox = document.getElementById('input-box');
+const listContainer = document.getElementById('list-container');
+
+function addTask() {
+    if(inputBox.value === '') {
+        alert ("You must write something");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = '\u00d7';
+        li.appendChild(span);
+
+    }
+    inputBox.value = ""; //clears the test after task is added
+    storeData(); //stores the data in the browser
+}
+```
+#### if/else statement for adding the task^:
+
+   a) it checks the value of the input and throws and error if it is empty
+
+   b) creates HTML <li> item and sets the value from the inputBox to it 
+
+   c) appends the newly created <li> element to the container
+   d) creates <span> element and assigns 'x' character
+
+   e) appends the <span> element to the <li> element
+
+   f) after else{ } completes inputBox is cleared so new task can be added
+
+   g) executes storesData() function for storing data in the browser
+```bash
+listContainer.addEventListener("click", function(e) {
+    if(e.target.tagName === "LI") {
+        e.target.classList.toggle("checked");
+        storeData();
+    }
+    else if(e.target.tagName === "SPAN") {
+        e.target.parentElement.remove();
+        storeData()
+    }
+},false);
+```
+#### addEventListener attached to the listContainer <ul>, designed to click on elements inside^:
+a) if cklicked on task exequtes toggle of 'checked' class defined in todo.css
+
+b) executes storesData() 
+
+c) if cklicked on it 'X' parentElement (<li>) is removed
+
+d) executes storesData()
+
+e) appends the <span> element to the <li> element
+
+f) after else{ } completes inputBox is cleared so new task can be added
+
+g) executes storesData() function for storing data in the browser
+```bash
+function storeData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showData() {
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+```
+#### stores data in browser local storage and shows it when showData() is called^
+```bash
+function del() {
+    if (confirm("All tasks will be removed! Are you sure you want to terminate this list?")) {
+        localStorage.clear();
+        const ul = document.querySelector('ul');
+        ul.innerHTML = '';
+    }
+    else {}
+}
+```
+#### after confirmation, uses the localStorage.clear() method to clear the <ul> data^
+```bash
+inputBox.addEventListener("keypress", function(event) { //action upon pressin ENTER
+    if(event.key === "Enter") {
+        event.preventDefault(); // prevent default actions of the Enter key
+        document.getElementById('hidden-mobi').click();
+    }
+},false);
+
+showData();
+```
+#### assignes an addEventListener to the inputBox to "listen" for the Enter key and excutes click() action of the button with id='hidden-mobi' (onclick="addTask())^
+
+
 ## Create an Image Gallery with Filtering
 Including completed tasks:
 - Gather a set of images and categorize/tag them accordingly.
