@@ -34,9 +34,8 @@ remove()
 appendChild()
 createElement()
 preventDefault()
-setData()
-storeData()
-showData()
+localStorage.setItem()
+localStorage.getItem()
 ```
 - Adding tasks with a push of a button (Enter):
 
