@@ -37,6 +37,7 @@ preventDefault()
 localStorage.setItem()
 localStorage.getItem()
 localStorage.clear()
+(window) confirm()
 ```
 - Adding tasks with a push of a button (Enter):
 
