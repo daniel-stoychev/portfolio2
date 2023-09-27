@@ -36,6 +36,7 @@ createElement()
 preventDefault()
 localStorage.setItem()
 localStorage.getItem()
+localStorage.clear()
 ```
 - Adding tasks with a push of a button (Enter):
 
