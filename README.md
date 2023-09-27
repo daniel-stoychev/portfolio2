@@ -75,12 +75,12 @@ function addTask() {
 
    a) it checks the value of the input and throws and error if it is empty
 
-   b) creates HTML <li> item and sets the value from the inputBox to it 
+   b) creates HTML 'li' item and sets the value from the inputBox to it 
 
-   c) appends the newly created <li> element to the container
-   d) creates <span> element and assigns 'x' character
+   c) appends the newly created 'li' element to the container
+   d) creates 'span' element and assigns 'x' character
 
-   e) appends the <span> element to the <li> element
+   e) appends the span' element to the 'li' element
 
    f) after else{ } completes inputBox is cleared so new task can be added
 
@@ -102,11 +102,11 @@ a) if cklicked on task exequtes toggle of 'checked' class defined in todo.css
 
 b) executes storesData() 
 
-c) if cklicked on it 'X' parentElement (<li>) is removed
+c) if cklicked on it 'X' parentElement 'li' is removed
 
 d) executes storesData()
 
-e) appends the <span> element to the <li> element
+e) appends the span' element to the 'li' element
 
 f) after else{ } completes inputBox is cleared so new task can be added
 
