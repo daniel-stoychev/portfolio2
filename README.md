@@ -159,6 +159,128 @@ grid layout.
 images based on selected categories/tags.
 - Incorporate lightbox functionality to display larger versions of the images
 when clicked.
+
+### Comments and code review
+
+```bash
+<div class="btnContainer">
+			<ul>
+				<li class="list active" data-filter="all">Show All</button>
+				<li class="list" data-filter="spring">Spring</button>
+				<li class="list" data-filter="summer">Summer</button>
+				<li class="list" data-filter="autumn">Autumn</button>
+				<li class="list" data-filter="winter">Winter</button>	
+			</ul>		
+		</div>
+```
+#### defines unordered list with 5 data filters^
+
+```bash
+<div class="images">
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(1)"><img src="images/gallery/autumn1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(2)"><img src="images/gallery/spring2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(3)"><img src="images/gallery/winter2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(4)"><img src="images/gallery/summer1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(5)"><img src="images/gallery/summer2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(6)"><img src="images/gallery/summer3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="summer" onclick="openModal();currentSlide(7)"><img src="images/gallery/summer4Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(8)"><img src="images/gallery/autumn3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="autumn" onclick="openModal();currentSlide(9)"><img src="images/gallery/autumn2Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(10)"><img src="images/gallery/spring1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(11)"><img src="images/gallery/winter3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="spring" onclick="openModal();currentSlide(12)"><img src="images/gallery/spring3Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				<div class="item" data-item="winter" onclick="openModal();currentSlide(13)"><img src="images/gallery/winter1Thumb.jpg"><div class="overlay"><span><img src="images/gallery/magnifying-glass.png"></span></div></div>
+				
+</div>
+```
+#### parent and child containers (including thumbnails) showed outside Modal^
+```bash
+<div class="modal-content">
+
+				    <div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn1.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring2.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter2.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer1.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer2.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer3.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="summer">
+						<img src="images/gallery/summer4.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn3.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="autumn">
+						<img src="images/gallery/autumn2.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring1.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter3.jpg" id="bigIMG">
+					</div>
+					<div class="mySlides" data-item="spring">
+						<img src="images/gallery/spring3.jpg" id="smallIMG">
+					</div>
+					<div class="mySlides" data-item="winter">
+						<img src="images/gallery/winter1.jpg" id="bigIMG">
+					</div>
+
+</div>
+```
+#### Modal HTML structure^
+======================
+```bash
+for (let i = 0; i<list.length; i++){
+	list[i].addEventListener('click', function(){
+		for(let j = 0; j<list.length; j++){
+			list[j].classList.remove('active')
+		}
+		
+		this.classList.add('active');
+
+		let dataFilter = this.getAttribute('data-filter');
+
+		for(let k = 0; k<item.length; k++){
+			item[k].classList.remove('active');
+			item[k].classList.add('hide');
+
+			if(item[k].getAttribute('data-item') == dataFilter || dataFilter == 'all'){
+				item[k].classList.remove('hide')
+				item[k].classList.add('active')
+			}
+		}
+	})
+}
+```
+#### handles the filtering^
+   a) iterates through an array of list elements
+
+   b) For each list element, it adds a click event listener using addEventListener. When a list element is clicked, the attached function is executed 
+
+   c) the click event handler function
+
+- first removes the 'active' class from all list elements
+- then, it adds the 'active' class to the clicked list element. 
+- it retrieves the value of the data-filter attribute from the clicked list element
+- go through the 'item' list one more time
+     
+     -- for each item element, it removes the 'active' class and adds the 'hide' class
+     
+     -- checks whether the data-item attribute of the item element matches the dataFilter value obtained from the clicked list element or if dataFilter is 'all'. If there's a match or if dataFilter is 'all', it removes the 'hide' class and adds the 'active' class to the item element, making it visible
+
 ## Home Page Design Idea
 
 https://www.storiesforgood.org/
