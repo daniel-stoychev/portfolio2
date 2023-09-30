@@ -131,7 +131,7 @@ function del() {
     else {}
 }
 ```
-#### after confirmation, uses the localStorage.clear() method to clear the <ul> data^
+#### after confirmation, uses the localStorage.clear() method to clear the 'ul' data^
 ```bash
 inputBox.addEventListener("keypress", function(event) { //action upon pressin ENTER
     if(event.key === "Enter") {
