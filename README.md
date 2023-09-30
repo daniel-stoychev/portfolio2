@@ -281,6 +281,64 @@ for (let i = 0; i<list.length; i++){
      
      -- checks whether the data-item attribute of the item element matches the dataFilter value obtained from the clicked list element or if dataFilter is 'all'. If there's a match or if dataFilter is 'all', it removes the 'hide' class and adds the 'active' class to the item element, making it visible
 
+```bash
+function openModal() {
+  	const zoomModal = document.getElementById('myModal');
+  	zoomModal.style.display = "block";
+}
+```
+#### open Modal function by setting its display to 'block'^
+```bash
+function closeModal() {
+ 	document.getElementById("myModal").style.display = "none";
+ }
+ ```
+#### close Modal function by setting its display to 'none'^
+ ```bash
+ const	modalOverlay = document.querySelector('.modal');
+ modalOverlay.addEventListener('click', (event) => {
+ 	if (event.target === modalOverlay) {
+ 		closeModal();
+ 	}
+ })
+ ```
+ #### attach click event listener to the modal overlay to close the modal^
+
+```bash
+let slideIndex;
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let m;
+  let slides = document.getElementsByClassName("mySlides");
+  for (m = 0; m < slides.length; m++) {
+      slides[m].style.display = "none";
+  }
+
+  slides[slideIndex-1].style.display = "block"; 
+
+}
+```
+ #### attach click event listener to the modal overlay to close the modal^
+
+ a) Declares a variable named 'slideIndex' without initializing it with a specific value
+ 
+ b) The 'currentSlide(n)' function
+ 
+
+ - takes a parameter 'n', which represents the index of the slide that needs to be displayed
+ - it calls the 'showSlides()' function and assigns the value of 'n' to 'slideIndex'. This effectively sets the 'slideIndex' to the desired slide index and displays that slide.
+  c) The 'showSlides(n)' function
+  
+  - initializes a variable 'm' that will be used for looping through the slide elements
+  - gets all the elements with the class name "mySlides" 
+  - loops through all the slide elements and sets their style.display property to 'none'
+  - displays the slide with the index 'slideIndex-1' (adjusting for zero-based indexing) by setting its style.display property to 'block'. This makes the selected slide visible while hiding the others.
+  
+
 ## Home Page Design Idea
 
 https://www.storiesforgood.org/
