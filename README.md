@@ -322,7 +322,7 @@ function showSlides(n) {
 
 }
 ```
- #### attach click event listener to the modal overlay to close the modal^
+ #### functions for opening selected thumbnail image^
 
  a) Declares a variable named 'slideIndex' without initializing it with a specific value
  
