@@ -97,7 +97,7 @@ listContainer.addEventListener("click", function(e) {
     }
 },false);
 ```
-#### addEventListener attached to the listContainer <ul>, designed to click on elements inside^:
+#### addEventListener attached to the listContainer 'ul', designed to click on elements inside^:
 a) if cklicked on task exequtes toggle of 'checked' class defined in todo.css
 
 b) executes storesData() 
