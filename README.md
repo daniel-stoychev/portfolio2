@@ -1,4 +1,3 @@
-
 # Portfolio 2
 ## Personal portfolio website
 
@@ -10,12 +9,106 @@ Including completed tasks:
     a) smooth scrolling ```[scrollIntoView() method]```
     - defined 2 buttons one of which is a lottie animation. Used BodyMovin (After Effects extension) to export it as JSON.
 
-    b) form validation ```[if statement]```
+	```bash
+	function scrollElement1() {
+    let element = document.getElementById("section2");
+    element.scrollIntoView({behavior:'smooth'});
+	}
+	function scrollElement(){
+	let element = document.getElementById("section1");
+	element.scrollIntoView({behavior: 'smooth'});
+	}
+	```
+	```bash
+	<button onclick= "scrollElement()" id="animation_container"></button>
+	<button onclick= "scrollElement1()" id="to_video" type="button">Smooth scroll to video!</button>
+			<script>
+				let	= animation = bodymovin.loadAnimation({
+					container: document.getElementById('animation_container'),
+					path: 'arrow.json',
+					render: 'svg',
+					loop: true,
+					autoplay: true,
+				})
+			</script>
+	```
+
+	b) form validation ```[if statement]```
+	```bash
+	function validateForm() {
+		let x = document.forms["subForm"]["email"].value;
+		if (x == '') {
+			alert ("Please type your email address");
+			return false;
+		}
+	}
+	```
+
 
     c) interactive elements ```[prompt() method / IntersectionObserver]```
 
-    d) mobile menu with toggle functionality
-- Publish your portfolio website online -> https://portfolio.danielstoychev.com/ 
+	```bash
+	const observer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				document.querySelectorAll(".animated")[0].classList.add("text1");
+				document.querySelectorAll(".animated")[1].classList.add("video_section");
+			}
+		})
+	})
+
+	observer.observe(document.querySelector(".text"));
+
+	const observer_btn = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				document.querySelectorAll(".animated_btn")[0].classList.add("todo");
+				document.querySelectorAll(".animated_btn")[1].classList.add("gallery");
+			}
+		})
+	})
+
+	observer_btn.observe(document.querySelector(".section3"));
+
+	const observer_footer = new IntersectionObserver(entries => {
+		entries.forEach(entry => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('footer_content');
+			}
+		})
+	})
+
+	observer_footer.observe(document.querySelector(".footer_parent"));
+	```
+
+ 	d) mobile menu with toggle functionality
+	```bash
+	let menubutton = document.querySelector('.menubutton');
+	let menu = document.querySelector('.menu');
+
+	menubutton.onclick = function() {
+		menubutton.classList.toggle("active");
+		menu.classList.toggle("active");
+	```
+    e) scroll to top with jQuery
+	```bash
+	let btn = $('#button');
+
+	$(window).scroll(function() {
+	if ($(window).scrollTop() > 500) {
+		btn.addClass('show');
+	} else {
+		btn.removeClass('show');
+	}
+	});
+
+	btn.on('click', function(e) {
+	e.preventDefault();
+	$('html, body').animate({scrollTop:0}, '900');
+	});
+	```
+
+- Publish your portfolio website online -> https://portfolio.danielstoychev.com/
 
 ## To-Do List Application
 Including completed tasks:
