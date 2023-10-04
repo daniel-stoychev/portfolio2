@@ -122,7 +122,6 @@ page reloads. Methods used:
 ```bash
 getElementById()
 querySelector()
-getItem()
 remove()
 appendChild()
 createElement()
